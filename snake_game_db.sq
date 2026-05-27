@@ -1,0 +1,54 @@
+-- MariaDB dump 10.19  Distrib 10.4.32-MariaDB, for Win64 (AMD64)
+--
+-- Host: localhost    Database: nokia_snake_db
+-- ------------------------------------------------------
+-- Server version	10.4.32-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `tbl_leaderboard`
+--
+
+DROP TABLE IF EXISTS `tbl_leaderboard`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_leaderboard` (
+  `player_id` int(11) NOT NULL AUTO_INCREMENT,
+  `player_name` varchar(50) NOT NULL,
+  `score` int(11) NOT NULL,
+  `survival_time` int(11) NOT NULL,
+  `date_recorded` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`player_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_leaderboard`
+--
+
+LOCK TABLES `tbl_leaderboard` WRITE;
+/*!40000 ALTER TABLE `tbl_leaderboard` DISABLE KEYS */;
+INSERT INTO `tbl_leaderboard` VALUES (1,'maxxedd',0,2,'2026-05-27 17:05:18'),(2,'mekamaxxedd',70,21,'2026-05-27 17:08:37'),(3,'maxxedd',20,5,'2026-05-27 17:23:32'),(4,'maxxedd',0,1,'2026-05-27 17:26:33'),(5,'mkeak',0,4,'2026-05-27 17:28:00'),(6,'mekamaxxeddd',160,37,'2026-05-27 17:29:11'),(7,'apol',220,55,'2026-05-27 17:37:18'),(8,'maxxedd',50,13,'2026-05-27 17:59:28'),(9,'vadfdfd',10,2,'2026-05-27 18:00:56'),(10,'maekaealf',60,15,'2026-05-27 18:07:59'),(11,'dasjkd',10,0,'2026-05-27 18:11:52'),(12,'maxxeddd',60,19,'2026-05-27 18:12:44'),(13,'maximus',200,56,'2026-05-27 18:19:42'),(14,'ahay',30,9,'2026-05-27 18:26:48'),(15,'asdasd',10,2,'2026-05-27 18:27:12'),(16,'phoebe',60,0,'2026-05-27 18:27:42'),(17,'asdasd',0,2,'2026-05-27 18:30:16'),(18,'ryan',250,74,'2026-05-27 18:50:39'),(19,'emms',290,85,'2026-05-27 18:52:18'),(20,'hehe',100,25,'2026-05-27 18:58:16'),(21,'high',390,107,'2026-05-27 19:00:18'),(22,'rere',0,1,'2026-05-27 19:04:46'),(23,'thnaks',90,22,'2026-05-27 19:12:22'),(24,'ahay',310,81,'2026-05-27 19:31:50'),(25,'cheats',90,19,'2026-05-27 19:32:33');
+/*!40000 ALTER TABLE `tbl_leaderboard` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2026-05-23  3:45:45
